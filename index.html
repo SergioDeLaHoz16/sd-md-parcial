@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda de Registro de Información</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form name="form1">
+            <h1 class="title">Simulador de Cálculo Salarial de Profesores Universitarios en Colombia</h1>
+            <br>
+            <p>Simulacion basada en el acuerdo con el decreto 1279.</p>
+            <h2>1. TÍTULOS DE ESTUDIOS UNIVERSITARIOS</h2>
+            <p><b>Registro de Información: Títulos Universitarios</p></b>
+            <ul>
+                <li>
+                    <p>Por títulos de pregrado: <b>Sólo si se ha obtenido el diploma.</p></b>
+                    <ul>
+                        <label><input type="radio" name="titulo_pregrado" value="medicina"> Medicina Humana o
+                            composición
+                            Musical: </label><br>
+                        <label><input type="radio" name="titulo_pregrado" value="otra_area"> En otra área: </label><br>
+
+                    </ul>
+                </li>
+                <li>
+                    <p>Por títulos de Posgrado.</p>
+                    <ul>
+                        <li><b>Especializaciones:</b> incluye subespecializaciones clínicas o médicas</li><br>
+                        <ul>
+                            <li><b>Clínicas en Medicina Humana y Odontología: </b><input type="number" min="0"
+                                    name="especializacion_años" placeholder="Años académicos"></li>
+                            <li>No Clínicas: <input type="number" min="0" name="no_clinicas_años"
+                                    placeholder="Programas cursados"></li>
+
+                        </ul>
+                        <br>
+                        <ul>
+                            <li>Magister o Maestrías: <input type="number" min="0" name="maestrias_años"
+                                    placeholder="Programas cursados"></li>
+                            <li>Ph.D. o Doctorado: <input type="number" min="0" name="doctorado_años"
+                                    placeholder="Programas cursados"></li>
+                            <input type="checkbox" id="doctorado_1998" name="doctorado_1998"
+                                value="doctorado_1998"><label for="doctorado_1998">Título de Doctorado obtenido después
+                                de 1998</label>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>2. CATEGORÍAS DENTRO DEL ESCALAFÓN DOCENTE</h2>
+            <p>Ayuda de Registro de Información: Escalafón Docente</p>
+            <ul>
+                <li>CATEGORÍA</li>
+                <select class="escalafon" name="categoria_docente">
+                    <option value="Auxiliar">Auxiliar</option>
+                    <option value="Asistente">Asistente</option>
+                    <option value="Asociado">Asociado</option>
+                    <option value="Titular">Titular</option>
+                </select>
+            </ul>
+
+            <h2>3. EXPERIENCIA CALIFICADA</h2>
+            <p>Ayuda de Registro de Información: Escalafón Docente</p>
+            <p>En caso de tener simultaneidad en tipos de experiencia en un mismo período, seleccione sólo un tipo.</p>
+            <p>Esta experiencia debe certificarse por escrito para cada tipo, donde se incluya el cargo, período y la
+                dedicación
+                correspondiente.</p>
+            <ul>
+                <li>Años</li>
+                <ul>
+                    <li>Experiencia Investigativa: <input type="number" min="0" name="experiencia_investigativa_años"
+                            placeholder="Años"></li>
+                    <li>Experiencia Docente: <input type="number" min="0" name="experiencia_docente_años"
+                            placeholder="Años">
+                    </li>
+                    <li>Experiencia Cargos Dirección Académica: <input type="number" min="0"
+                            name="experiencia_direccion_años" placeholder="Años"></li>
+                    <li>Experiencia no Docente: <input type="number" min="0" name="experiencia_no_docente_años"
+                            placeholder="Años"></li>
+                </ul>
+            </ul>
+
+            <h2>4. PRODUCTIVIDAD ACADEMICA</h2>
+            <p>Ayuda de Registro de Información: Productividad Académica</p>
+            <p>A continuación debe suministrar el número de trabajos de su autoría y considerados como productividad
+                académica
+                según el decreto 1279 de 2002, que pueden ser considerados para puntaje salarial, dado que existen
+                también
+                puntos de bonificación que no se tienen en cuenta para el cálculo del salario de vinculación.</p>
+            <p>Para visualizar el listado de revistas homologadas consulte el siguiente enlace: <a
+                    href="https://scienti.minciencias.gov.co/publindex/#/revistasHomologadas/buscador">Revistas
+                    Homologadas</a>
+            </p>
+            <p>Para las revistas nacionales consulte el enlace: <a
+                    href="https://scienti.minciencias.gov.co/publindex/#/revistasPublindex/buscador">Revistas
+                    Publindex</a></p>
+
+            <ul><li>Revistas Especializadas</li>
+                <ul>
+                    <li>Artículos</li>
+                    <ul>
+                        <li>En revistas indexadas por COLCIENCIAS A1:
+                            <input type="number" min="0" name="articulos_A1" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_A1', this)">
+                            <div id="autores_A1"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS A2:
+                            <input type="number" min="0" name="articulos_A2" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_A2', this)">
+                            <div id="autores_A2"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS B:
+                            <input type="number" min="0" name="articulos_B" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_B', this)">
+                            <div id="autores_B"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS C:
+                            <input type="number" min="0" name="articulos_C" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_C', this)">
+                            <div id="autores_C"></div>
+                        </li>
+                    </ul>
+                    <li>Otros</li>
+                    <ul>
+                        <li>En revistas indexadas por COLCIENCIAS A1:
+                            <input type="number" min="0" name="otros_A1" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_otros_A1', this)">
+                            <div id="autores_otros_A1"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS A2:
+                            <input type="number" min="0" name="otros_A2" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_otros_A2', this)">
+                            <div id="autores_otros_A2"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS B:
+                            <input type="number" min="0" name="otros_B" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_otros_B', this)">
+                            <div id="autores_otros_B"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS C:
+                            <input type="number" min="0" name="otros_C" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_otros_C', this)">
+                            <div id="autores_otros_C"></div>
+                        </li>
+                    </ul>
+                    <li>Reportes de casos, revisión de temas, carta al editor o editorial</li>
+                    <ul>
+                        <li>En revistas indexadas por COLCIENCIAS A1:
+                            <input type="number" min="0" name="reportes_A1" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_reportes_A1', this)">
+                            <div id="autores_reportes_A1"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS A2:
+                            <<input type="number" min="0" name="reportes_A2" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_reportes_A2', this)">
+                            <div id="autores_reportes_A2"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS B:
+                            <input type="number" min="0" name="reportes_B" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_reportes_B', this)">
+                            <div id="autores_reportes_B"></div>
+                        </li>
+                        <li>En revistas indexadas por COLCIENCIAS C:
+                            <input type="number" min="0" name="reportes_C" placeholder="Número de Artículos"
+                            oninput="generarCeldas('autores_reportes_C', this)">
+                            <div id="autores_reportes_C"></div>
+                        </li>
+                    </ul>
+                </ul>
+
+            <ul>
+                <li>Producción de Videos Cinematográficos o Fonográficos</li>
+                <ul>
+                    <li>Difusión de Impacto Internacional:
+                        <input type="number" min="0" name="videos_internacionales"
+                            placeholder="Numero de trabajos"
+                            oninput="generarCeldas('autores_videos_internacionales', this)">
+                        <div id="autores_videos_internacionales"></div>
+                    </li>
+                    <li>Difusión de Impacto Nacional:
+                        <input type="number" min="0" name="videos_nacionales"
+                        placeholder="Numero de trabajos"
+                        oninput="generarCeldas('autores_videos_nacionales', this)">
+                    <div id="autores_videos_nacionales"></div>
+                    </li>
+                </ul>
+            </ul>
+
+            <ul>
+                <li>Libros que resultan de una labor de investigación:
+                    <input type="number" min="0" name="libros_investigacion"
+                    placeholder="Numero de Libros"
+                    oninput="generarCeldas('autores_libros_investigacion', this)">
+                    <div id="autores_libros_investigacion"></div>  
+                </li>
+                <li>Libros texto
+                    <input type="number" min="0" name="libros_textos"
+                    placeholder="Numero de Libros"
+                    oninput="generarCeldas('autores_libros_textos', this)">
+                    <div id="autores_libros_textos"></div>  
+                </li>
+                <li>Libros de ensayo
+                    <input type="number" min="0" name="libros_ensayos"
+                    placeholder="Numero de Libros"
+                    oninput="generarCeldas('autores_libros_ensayos', this)">
+                    <div id="autores_libros_ensayos"></div>   
+                </li>
+                <li>Premios Nacionales o Internacionales
+                    <input type="number" min="0" name="premios"
+                    placeholder="Numero de Premios"
+                    oninput="generarCeldas('autores_premios', this)">
+                    <div id="autores_premios"></div>   
+                </li>
+                <li>Patentes:
+                        <input type="number" min="0" name="patentes"
+                    placeholder="Numero de Patentes"
+                    oninput="generarCeldas('autores_patentes', this)">
+                    <div id="autores_patentes"></div>  
+                </li>
+                <li>Traducciones de Libros:
+                    <input type="number" min="0" name="traducciones"
+                    placeholder="Numero de Libros"
+                    oninput="generarCeldas('autores_traducciones', this)">
+                    <div id="autores_traducciones"></div>
+                </li>
+            </ul>
+            <ul>
+                <li>Obras Artísticas</li>
+                <ul>
+                    <li>De impacto y trascendencia internacional:
+                            <input type="number" min="0" name="obras_internacionales"
+                            placeholder="Numero de Obras"
+                            oninput="generarCeldas('autores_obras_internacionales', this)">
+                            <div id="autores_obras_internacionales"></div>
+                    </li>
+                    <li>De impacto y trascendencia nacional:
+                        <input type="number" min="0" name="obras_nacionales"
+                        placeholder="Numero de Obras"
+                        oninput="generarCeldas('autores_obras_nacionales', this)">
+                        <div id="autores_obras_nacionales"></div>
+                    </li>
+                </ul>
+            </ul>
+
+            <ul>
+                <li>Producción Técnica</li>
+                <ul>
+                    <li>Innovación tecnológica:
+                            <input type="number" min="0" name="innovacion_tecnologica"
+                            placeholder="Numero de trabajos"
+                            oninput="generarCeldas('autores_innovacion_tecnologica', this)">  
+                            <div id="autores_innovacion_tecnologica"></div>
+                    </li>
+                    <li>Adaptación tecnológica:
+                            <input type="number" min="0" name="adaptacion_tecnologica"
+                            placeholder="Numero de trabajos"
+                            oninput="generarCeldas('autores_adaptacion_tecnologica', this)">
+                            <div id="autores_adaptacion_tecnologica"></div>
+                        
+                    </li>
+                </ul>
+            </ul>
+            <ul>
+                <li>Producción de Software:
+                        <input type="number" min="0" name="productos_software"
+                        placeholder="Numero de trabajos"
+                        oninput="generarCeldas('autores_productos_software', this)">
+                        <div id="autores_productos_software"></div>
+                       
+                </li>
+            </ul>
+
+            <h2>Ayuda de Registro de Información: Productividad Académica</h2>
+            <p>SIMULACION</p>
+            <table id="resultado_table">
+                <tr>
+                    <th>Factor</th>
+                    <th>Puntaje</th>
+                </tr>
+                <tr>
+                    <td>Por títulos universitarios</td>
+                    <td id="puntaje_titulos">-</td>
+                </tr>
+                <tr>
+                    <td>Por categoría</td>
+                    <td id="puntaje_categoria">-</td>
+                </tr>
+                <tr>
+                    <td>Por experiencia</td>
+                    <td id="puntaje_experiencia">-</td>
+                </tr>
+                <tr>
+                    <td>Por productividad</td>
+                    <td id="puntaje_productividad">-</td>
+                </tr>
+                <tr>
+                    <td>Total puntaje acumulado</td>
+                    <td id="total_puntaje">-</td>
+                </tr>
+                <tr>
+                    <td>Valor punto</td>
+                    <td>$ 20895</td>
+                </tr>
+                <tr>
+                    <td>Sueldo estimado</td>
+                    <td id="sueldo_estimado">-</td>
+                </tr>
+            </table>
+
+            <div><br>
+                <input type="button" id="simularBtn" name="simular_s" value="Simular" class="borde_tabla_fino" onClick="simular()">
+                <br>
+                <br>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+
