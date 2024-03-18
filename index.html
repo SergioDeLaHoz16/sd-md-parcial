@@ -37,17 +37,17 @@
                         <li><b>Especializaciones:</b> incluye subespecializaciones clínicas o médicas</li><br>
                         <ul>
                             <li><b>Clínicas en Medicina Humana y Odontología: </b><input type="number" min="0"
-                                    name="especializacion_años" placeholder="Años académicos"></li>
+                                    name="especializacion_años" value="0" placeholder="Años académicos"></li>
                             <li>No Clínicas: <input type="number" min="0" name="no_clinicas_años"
-                                    placeholder="Programas cursados"></li>
+                                value="0" placeholder="Programas cursados"></li>
 
                         </ul>
                         <br>
                         <ul>
                             <li>Magister o Maestrías: <input type="number" min="0" name="maestrias_años"
-                                    placeholder="Programas cursados"></li>
+                                value="0" placeholder="Programas cursados"></li>
                             <li>Ph.D. o Doctorado: <input type="number" min="0" name="doctorado_años"
-                                    placeholder="Programas cursados"></li>
+                                value="0" placeholder="Programas cursados"></li>
                             <input type="checkbox" id="doctorado_1998" name="doctorado_1998"
                                 value="doctorado_1998"><label for="doctorado_1998">Título de Doctorado obtenido después
                                 de 1998</label>
@@ -78,14 +78,14 @@
                 <li>Años</li>
                 <ul>
                     <li>Experiencia Investigativa: <input type="number" min="0" name="experiencia_investigativa_años"
-                            placeholder="Años"></li>
+                        value="0" placeholder="Años"></li>
                     <li>Experiencia Docente: <input type="number" min="0" name="experiencia_docente_años"
-                            placeholder="Años">
+                        value="0" placeholder="Años">
                     </li>
                     <li>Experiencia Cargos Dirección Académica: <input type="number" min="0"
-                            name="experiencia_direccion_años" placeholder="Años"></li>
+                            name="experiencia_direccion_años" value="0" placeholder="Años"></li>
                     <li>Experiencia no Docente: <input type="number" min="0" name="experiencia_no_docente_años"
-                            placeholder="Años"></li>
+                        value="0" placeholder="Años"></li>
                 </ul>
             </ul>
 
@@ -109,22 +109,22 @@
                     <li>Artículos</li>
                     <ul>
                         <li>En revistas indexadas por COLCIENCIAS A1:
-                            <input type="number" min="0" name="articulos_A1" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="articulos_A1" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_A1', this)">
                             <div id="autores_A1"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS A2:
-                            <input type="number" min="0" name="articulos_A2" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="articulos_A2" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_A2', this)">
                             <div id="autores_A2"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS B:
-                            <input type="number" min="0" name="articulos_B" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="articulos_B" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_B', this)">
                             <div id="autores_B"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS C:
-                            <input type="number" min="0" name="articulos_C" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="articulos_C" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_C', this)">
                             <div id="autores_C"></div>
                         </li>
@@ -132,22 +132,22 @@
                     <li>Otros</li>
                     <ul>
                         <li>En revistas indexadas por COLCIENCIAS A1:
-                            <input type="number" min="0" name="otros_A1" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="otros_A1" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_otros_A1', this)">
                             <div id="autores_otros_A1"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS A2:
-                            <input type="number" min="0" name="otros_A2" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="otros_A2" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_otros_A2', this)">
                             <div id="autores_otros_A2"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS B:
-                            <input type="number" min="0" name="otros_B" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="otros_B" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_otros_B', this)">
                             <div id="autores_otros_B"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS C:
-                            <input type="number" min="0" name="otros_C" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="otros_C" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_otros_C', this)">
                             <div id="autores_otros_C"></div>
                         </li>
@@ -155,22 +155,22 @@
                     <li>Reportes de casos, revisión de temas, carta al editor o editorial</li>
                     <ul>
                         <li>En revistas indexadas por COLCIENCIAS A1:
-                            <input type="number" min="0" name="reportes_A1" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="reportes_A1" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_reportes_A1', this)">
                             <div id="autores_reportes_A1"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS A2:
-                            <<input type="number" min="0" name="reportes_A2" placeholder="Número de Artículos"
+                            <<input type="number" min="0" name="reportes_A2" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_reportes_A2', this)">
                             <div id="autores_reportes_A2"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS B:
-                            <input type="number" min="0" name="reportes_B" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="reportes_B" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_reportes_B', this)">
                             <div id="autores_reportes_B"></div>
                         </li>
                         <li>En revistas indexadas por COLCIENCIAS C:
-                            <input type="number" min="0" name="reportes_C" placeholder="Número de Artículos"
+                            <input type="number" min="0" name="reportes_C" value="0" placeholder="Número de Artículos"
                             oninput="generarCeldas('autores_reportes_C', this)">
                             <div id="autores_reportes_C"></div>
                         </li>
@@ -182,13 +182,13 @@
                 <ul>
                     <li>Difusión de Impacto Internacional:
                         <input type="number" min="0" name="videos_internacionales"
-                            placeholder="Numero de trabajos"
+                        value="0" placeholder="Numero de trabajos"
                             oninput="generarCeldas('autores_videos_internacionales', this)">
                         <div id="autores_videos_internacionales"></div>
                     </li>
                     <li>Difusión de Impacto Nacional:
                         <input type="number" min="0" name="videos_nacionales"
-                        placeholder="Numero de trabajos"
+                        value="0" placeholder="Numero de trabajos"
                         oninput="generarCeldas('autores_videos_nacionales', this)">
                     <div id="autores_videos_nacionales"></div>
                     </li>
@@ -198,37 +198,37 @@
             <ul>
                 <li>Libros que resultan de una labor de investigación:
                     <input type="number" min="0" name="libros_investigacion"
-                    placeholder="Numero de Libros"
+                    value="0" placeholder="Numero de Libros"
                     oninput="generarCeldas('autores_libros_investigacion', this)">
                     <div id="autores_libros_investigacion"></div>  
                 </li>
                 <li>Libros texto
                     <input type="number" min="0" name="libros_textos"
-                    placeholder="Numero de Libros"
+                    value="0" placeholder="Numero de Libros"
                     oninput="generarCeldas('autores_libros_textos', this)">
                     <div id="autores_libros_textos"></div>  
                 </li>
                 <li>Libros de ensayo
                     <input type="number" min="0" name="libros_ensayos"
-                    placeholder="Numero de Libros"
+                    value="0" placeholder="Numero de Libros"
                     oninput="generarCeldas('autores_libros_ensayos', this)">
                     <div id="autores_libros_ensayos"></div>   
                 </li>
                 <li>Premios Nacionales o Internacionales
                     <input type="number" min="0" name="premios"
-                    placeholder="Numero de Premios"
+                    value="0" placeholder="Numero de Premios"
                     oninput="generarCeldas('autores_premios', this)">
                     <div id="autores_premios"></div>   
                 </li>
                 <li>Patentes:
                         <input type="number" min="0" name="patentes"
-                    placeholder="Numero de Patentes"
+                        value="0" placeholder="Numero de Patentes"
                     oninput="generarCeldas('autores_patentes', this)">
                     <div id="autores_patentes"></div>  
                 </li>
                 <li>Traducciones de Libros:
                     <input type="number" min="0" name="traducciones"
-                    placeholder="Numero de Libros"
+                    value="0" placeholder="Numero de Libros"
                     oninput="generarCeldas('autores_traducciones', this)">
                     <div id="autores_traducciones"></div>
                 </li>
@@ -238,13 +238,13 @@
                 <ul>
                     <li>De impacto y trascendencia internacional:
                             <input type="number" min="0" name="obras_internacionales"
-                            placeholder="Numero de Obras"
+                            value="0" placeholder="Numero de Obras"
                             oninput="generarCeldas('autores_obras_internacionales', this)">
                             <div id="autores_obras_internacionales"></div>
                     </li>
                     <li>De impacto y trascendencia nacional:
                         <input type="number" min="0" name="obras_nacionales"
-                        placeholder="Numero de Obras"
+                        value="0" placeholder="Numero de Obras"
                         oninput="generarCeldas('autores_obras_nacionales', this)">
                         <div id="autores_obras_nacionales"></div>
                     </li>
@@ -256,13 +256,13 @@
                 <ul>
                     <li>Innovación tecnológica:
                             <input type="number" min="0" name="innovacion_tecnologica"
-                            placeholder="Numero de trabajos"
+                            value="0" placeholder="Numero de trabajos"
                             oninput="generarCeldas('autores_innovacion_tecnologica', this)">  
                             <div id="autores_innovacion_tecnologica"></div>
                     </li>
                     <li>Adaptación tecnológica:
                             <input type="number" min="0" name="adaptacion_tecnologica"
-                            placeholder="Numero de trabajos"
+                            value="0" placeholder="Numero de trabajos"
                             oninput="generarCeldas('autores_adaptacion_tecnologica', this)">
                             <div id="autores_adaptacion_tecnologica"></div>
                         
@@ -272,7 +272,7 @@
             <ul>
                 <li>Producción de Software:
                         <input type="number" min="0" name="productos_software"
-                        placeholder="Numero de trabajos"
+                        value="0" placeholder="Numero de trabajos"
                         oninput="generarCeldas('autores_productos_software', this)">
                         <div id="autores_productos_software"></div>
                        
